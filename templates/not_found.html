@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>City Not Found</title>
+{% endblock %}
+
+{% block body %} 
+<h1 style ="text-align: center"> City Not Found</h1>
+<p style ="text-align: center">It seems that your city was unable to be found. Make sure you spell it correctly!</p>
+<div class= "input">
+<form action = "http://127.0.0.1:5000/" method = "POST">
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city"><br><br>
+    <input type="submit" id="submit" name="submit">
+</form>   
+</div>
+{% endblock %}

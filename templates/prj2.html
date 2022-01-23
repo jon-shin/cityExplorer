@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>City Explorer</title>
+{% endblock %}
+
+{% block body %}
+{% if city %}
+<h1 style ="text-align: center"> Welcome to {{ city }}!</h1>
+<h2 style ="text-align: center">Country: {{ country }} {{ flag }}</h2>
+<h3 class= info>Today's date is {{ date }}</h3>
+<h3 class= info>The time in {{ city }} is {{ time }}</h3>
+<h3 class= info>The temperature is {{ temp }} &#176;F, {{ desc }}</h3> 
+<h3 class= info>The atmospheric pressure is {{ pressure }} hPa, {{ humidity }}% humidity</h3> 
+<h3 class= info>The coordinates are {{ lat }}, {{ long }}</h3>
+<p class = link>
+    <a href="https://en.wikipedia.org/wiki/{{ city }}">Find out more about {{ city }}!</a><br><br>
+</p>
+<div class="input">
+<form action = "http://127.0.0.1:5000/" method = "POST">
+    <label for="city">Check out another city:</label><br>
+    <input type="text" id="city" name="city"><br><br>
+    <input type="submit" id="submit" name="submit">
+</form>
+</div>
+{% else %}
+<h1 style="text-align: center">City Explorer</h1>
+<h2 style="text-align: center">Enter a City to Start!</h2><br>
+<div class="input">
+<form action = "http://127.0.0.1:5000/" method = "POST">
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city"><br><br>
+    <input type="submit" id="submit" name="submit">
+</form>
+</div>
+<div class= "globe"></div>
+{% endif %}
+{% endblock %}

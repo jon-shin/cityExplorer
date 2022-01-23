@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: paleturquoise;
+}
+
+.info{
+    text-align: center;
+    font-family: sans-serif;
+    border-style: solid;
+    background-color: aliceblue; 
+    outline-style: solid;
+    outline-color: green;
+}
+
+.link{
+    font-size: 20px;
+    width: 300px;
+    position: relative;
+    left: 490px;
+    border-style: solid;
+    text-align: center;
+    background-color: lightgreen;
+    display: inline-block;
+}
+
+div.input{
+    position: absolute;
+    left: 550px;
+}
+
+.globe{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    top: 270px;
+    left: 500px;
+    background-image: url(https://www.dkrz.de/en-bilder/en-bilder-nutzerportal/en-bilder-dokumentation/en-paraview/en-earth_texture/en-03_Topo_small.png);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: inset -8px 10px 15px 8px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+    animation: spin 30s linear alternate infinite;
+}
+
+@keyframes spin{
+    100%{background-position: 100%;}
+}  
